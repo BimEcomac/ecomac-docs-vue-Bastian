@@ -1,0 +1,10 @@
+---
+import '../tailwind.css';
+import LoginPage from "@/components/auth/LoginPage.vue";
+import Baselayout from '@/components/baselayout.astro';
+---
+<Baselayout>
+  <LoginPage client:idle>
+  </LoginPage>  
+</Baselayout>
+

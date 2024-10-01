@@ -1,0 +1,239 @@
+---
+title: Instalación de Tecnologías
+description: A reference page in my new Starlight docs site.
+lastUpdated: 2024-07-25
+---
+
+import { Aside, Card, CardGrid, Tabs, TabItem, Badge, FileTree } from '@astrojs/starlight/components';
+ 
+## Node.js
+<Card>
+  <div class="flex flex-col gap-4 items-baseline justify-center h-16">
+    <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js Logo" class="h-16 w-16"/>
+    <Badge text="Instalación" variant="caution" size="small" />
+  </div>
+  <ul class="list-disc pl-4">
+    <li>Ve a la <a href="https://nodejs.org/en/download/package-manager/current" target="_blank" rel="noopener noreferrer">página de descargas</a> de Node.js.</li>
+    <li>Descarga el instalador adecuado para tu sistema operativo (Windows, macOS, Linux).</li>
+    <li>Ejecuta el instalador y sigue las instrucciones en pantalla.</li>
+  </ul>
+  <p class="mt-2">Para verificar la instalación, abre una terminal y ejecuta:</p>
+  <pre><code>node -v
+npm -v</code></pre>
+</Card>
+
+## PHP
+<Card>
+  <div class="flex flex-col gap-4 items-baseline justify-center h-16">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1280px-PHP-logo.svg.png" alt="PHP Logo" class="h-16 w-16"/>
+      <Badge text="Instalación" variant="caution" size="small" />
+  </div>
+  <ul class="list-disc pl-4">
+    <li>Ve a la <a href="https://www.php.net/downloads" target="_blank" rel="noopener noreferrer">página de descargas</a> de PHP.</li>
+    <li>Descarga la versión adecuada para tu sistema operativo.</li>
+    <li>Sigue las instrucciones específicas para tu sistema operativo:</li>
+  </ul>
+  <Tabs>
+    <TabItem label="Windows" icon="seti:windows">
+      Utiliza el instalador o descarga el archivo zip y agrega PHP a tu PATH.
+    </TabItem>
+    <TabItem label="macOS" icon="apple">
+      Usa Homebrew:
+      <pre><code>brew install php</code></pre>
+    </TabItem>
+    <TabItem label="Linux" icon="linux">
+      Usa el gestor de paquetes de tu distribución:
+      <pre><code>sudo apt-get install php</code></pre>
+    </TabItem>
+  </Tabs>
+  <p class="mt-2">Para verificar la instalación, abre una terminal y ejecuta:</p>
+  <pre><code>php -v</code></pre>
+</Card>
+
+## NGrok
+<Card>
+  <div class="flex flex-col gap-4 items-baseline justify-center h-16">
+    <img src="https://logowik.com/content/uploads/images/ngrok-api-gateway1721159714.logowik.com.webp" alt="Ngrok Logo" class="h-16 w-16"/>
+    <Badge text="Instalación" variant="caution" size="small" />
+  </div>
+  <ul class="list-disc pl-4">
+    <li>Ve a la <a href="https://ngrok.com/download" target="_blank" rel="noopener noreferrer">página de descargas</a> de Ngrok.</li>
+    <li>Descarga la versión adecuada para tu sistema operativo.</li>
+    <li>Extrae el archivo descargado y coloca el binario en una ubicación de tu PATH.</li>
+  </ul>
+  <p class="mt-2">Para verificar la instalación, abre una terminal y ejecuta:</p>
+  <pre><code>ngrok version</code></pre>
+</Card>
+
+## Git
+<Card>
+  <div class="flex flex-col gap-4 items-baseline justify-center h-16">
+    <img src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" alt="Git Logo" class="h-16 w-16"/>
+    <Badge text="Instalación" variant="caution" size="small" />
+  </div>
+  <ul class="list-disc pl-4">
+    <li>Ve a la <a href="https://git-scm.com/downloads" target="_blank" rel="noopener noreferrer">página de descargas</a> de Git.</li>
+    <li>Descarga el instalador adecuado para tu sistema operativo.</li>
+    <li>Ejecuta el instalador y sigue las instrucciones en pantalla.</li>
+  </ul>
+  <p class="mt-2">Para verificar la instalación, abre una terminal y ejecuta:</p>
+  <pre><code>git --version</code></pre>
+</Card>
+
+## GitHub Desktop
+<Card>
+  <div class="flex flex-col gap-4 items-baseline justify-center h-16">
+    <img src="https://desktop.github.com/images/desktop-icon.svg" alt="GitHub Logo" class="h-16 w-16"/>
+    <Badge text="Instalación" variant="caution" size="small" />
+  </div>
+  <ul class="list-disc pl-4">
+    <li>Ve a la <a href="https://desktop.github.com/download/" target="_blank" rel="noopener noreferrer">página de descargas</a> de GitHub Desktop.</li>
+    <li>Descarga el instalador adecuado para tu sistema operativo.</li>
+    <li>Ejecuta el instalador y sigue las instrucciones en pantalla.</li>
+  </ul>
+  <p class="mt-2">Abre GitHub Desktop y verifica que se abre correctamente.</p>
+</Card>
+
+## Visual Studio Code
+<Card>
+  <div class="flex flex-col gap-4 items-baseline justify-center h-16">
+    <img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="VS Code Logo" class="h-16 w-16"/>
+  </div>
+    <Badge text="Instalación" variant="caution" size="small" />
+  <ul class="list-disc pl-4">
+    <li>Ve a la <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">página de descargas</a> de Visual Studio Code.</li>
+    <li>Descarga el instalador adecuado para tu sistema operativo.</li>
+    <li>Ejecuta el instalador y sigue las instrucciones en pantalla.</li>
+  </ul>
+  <p class="mt-2">Abre Visual Studio Code y verifica que se abre correctamente.</p>
+
+  <Card>
+    ### Extensiones
+    <ul class="list-disc pl-4">
+      <li><Badge text="Prettier">Prettier</Badge>: Formatea tu código automáticamente, asegurando un estilo consistente.</li>
+      <li><Badge text="Astro">Astro</Badge>: Soporte completo para el desarrollo con el framework Astro.</li>
+      <li><Badge text="GitHub Copilot">GitHub Copilot</Badge>: Herramienta de IA que sugiere código y funciones completas en tiempo real.</li>
+      <li><Badge text="Better Comments">Better Comments</Badge>: Mejora la legibilidad de los comentarios de código con colores y formatos especiales.</li>
+      <li><Badge text="Live Share">Live Share</Badge>: Colabora en tiempo real con otros desarrolladores.</li>
+      <li><Badge text="HTML CSS Support">HTML CSS Support</Badge>: Mejora el soporte para HTML y CSS.</li>
+      <li><Badge text="PHP Intelephense">PHP Intelephense</Badge>: Herramienta de inteligencia para PHP con autocompletado y análisis de código estático.</li>
+      <li><Badge text="Tailwind CSS IntelliSense">Tailwind CSS IntelliSense</Badge>: Proporciona autocompletado y documentación para Tailwind CSS.</li>
+      <li><Badge text="Vue - Official">Vue - Official</Badge>: Herramientas completas para el desarrollo con Vue.js.</li>
+      <li><Badge text="Vue VSCode Snippets">Vue VSCode Snippets</Badge>: Snippets útiles para Vue.js.</li>
+      <li><Badge text="GitHub Copilot Chat">GitHub Copilot Chat</Badge>: Extiende las capacidades de GitHub Copilot con una interfaz de chat.</li>
+      <li><Badge text="MDX">MDX</Badge>: Soporte para combinar Markdown con JSX.</li>
+      <li><Badge text="GitLens">GitLens</Badge>: Mejora las capacidades de Git en VS Code.</li>
+    </ul>
+  </Card>
+</Card>
+
+## Documentación
+<ul class="list-disc pl-4">
+  <li><a href="https://nodejs.org/en/about" target="_blank" rel="noopener noreferrer">Documentación de Node.js</a></li>
+  <li><a href="https://www.php.net/docs.php" target="_blank" rel="noopener noreferrer">Documentación de PHP</a></li>
+  <li><a href="https://ngrok.com/docs" target="_blank" rel="noopener noreferrer">Documentación de NGrok</a></li>
+  <li><a href="https://git-scm.com/doc" target="_blank" rel="noopener noreferrer">Documentación de Git</a></li>
+  <li><a href="https://docs.github.com/es/desktop/overview/about-github-desktop" target="_blank" rel="noopener noreferrer">Documentación de GitHub Desktop</a></li>
+  <li><a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener noreferrer">Documentación de VS Code</a></li>
+</ul>
+
+## Lecturas Adicionales
+<ul class="list-disc pl-4">
+  <li><a href="https://www.nodebeginner.org/" target="_blank" rel="noopener noreferrer">The Node Beginner Book</a></li>
+  <li><a href="https://github.com/getify/You-Dont-Know-JS" target="_blank" rel="noopener noreferrer">You Don't Know JS: ES6 & Beyond</a></li>
+  <li><a href="https://phptherightway.com/" target="_blank" rel="noopener noreferrer">PHP: The Right Way</a></li>
+  <li><a href="https://laravel.com/docs/11.x" target="_blank" rel="noopener noreferrer">Laravel Documentation</a></li>
+  <li><a href="https://git-scm.com/book/en/v2" target="_blank" rel="noopener noreferrer">Pro Git Book</a></li>
+  <li><a href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks" target="_blank" rel="noopener noreferrer">VS Code Tips and Tricks</a></li>
+  <li><a href="https://code.visualstudio.com/docs/sourcecontrol/overview" target="_blank" rel="noopener noreferrer">Using Git with VS Code</a></li>
+</ul>
+
+## Ejemplo de como levantar un sistema:
+1. **Primer acceda a github desktop**
+    
+  <Tabs>
+    <TabItem label="Clonar el proyecto" icon="github">
+      ![A rocketship in space](/src/assets/git-clone.png) 
+    </TabItem>
+
+    <TabItem label="Consola de comandos" icon="seti:powershell">
+      ```bash
+          git clone https://github.com/kikedb/ecomac-docs.git
+      ```
+    </TabItem>
+  </Tabs>
+    
+    2. **Realice un git fetch para ver si hay nuevas versiones**
+
+  <Tabs>
+    <TabItem label="Fetch del proyecto" icon="github">
+       ![A rocketship in space](/src/assets/fetch-docs.png)
+    </TabItem>
+
+    <TabItem label="Consola de comandos" icon="seti:powershell">
+      ```bash
+        git fetch 
+      ```
+    </TabItem>
+  </Tabs>
+
+    3. **Traiga las versiones disponible a su proyecto con un git pull**
+
+  <Tabs>
+    <TabItem label="Pull del Proyecto" icon="github">
+       ![A rocketship in space](/src/assets/pull-docs.png)
+    </TabItem>
+
+    <TabItem label="Consola de comandos" icon="seti:powershell">
+      ```bash
+        git pull 
+      ```
+    </TabItem>
+  </Tabs>
+
+
+### Arbol de carpetas
+Acceda a la carpeta utilizando los comandos si esta utilizando la terminal
+    
+    **Comado en git bash**
+```bash
+ cd ecomac-docs 
+```
+<FileTree>
+
+    - Proyectos
+        - Ecomac 
+            - ecomac-backend-cl
+            - **ecomac-docs**
+            - eva-backend
+            - somosecomac
+            - sentirse-en-casa
+
+</FileTree>
+### Corramos el ambiente!
+Una vez ya estando en el repositorio del proyecto **ecomac-docs** tenemos que proceder a instalar
+los packetes de Node para poder levantar nuestro ambiente. 
+
+    **Comado en git bash**
+```bash
+ npm install
+```
+Y una vez se hayan descargado he instalado todos los paquetes, tenemos que iniciar nuestro proyecto con el siguiente comando
+```bash
+ npm run dev
+```
+<Aside type="note" title="Nota">Puedes utilizar la consola de comandos en visual studio utilizando el siguiente atajo de teclado: **ctrl + ñ** </Aside>
+
+### Función de comandos
+
+| *Comandos*	| *Ación*    |
+|-----------|-----------|
+|   **npm install** |   Instala las dependencias   |
+|   **npm run dev**	|   Inicia un server local de desarrollo en **localhost:4321**  |
+|   **npm run build**   |  	Construye tú sitio de producción para **./dist/**   |
+|   **npm run preview** |	Obtenga una vista previa de su compilación localmente, antes de implementarla    |
+|   **npm run astro ...**   |	Ejecute comandos CLI como **astro add**, **astro check**    |
+|   **npm run astro -- --help** |	Obtenga ayuda para usar Astro CLI    |
+|   **git clone [url]** | Comando de git para clonar el proyecto    |
+|   **git fetch**   |   Comando de git para obtener la informacion actual del proyecto   |
+|   **git pull**   |   Comando de git para traer todos los cambios de la rama a tú repositorio |

@@ -1,0 +1,79 @@
+---
+title: Vagrant
+description: A reference page in my new Starlight docs site.
+lastUpdated: 2024-07-25
+---
+import { Aside } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+## Primeros pasos
+
+Vagrant lo necesitarás para crear tu propio entorno de desarrollo en conjunto a Virtual Box.
+
+¿Para qué sirve Vagrant? 
+
+Vagrant aísla las dependencias y su configuración dentro de un único entorno desechable y consistente, sin sacrificar ninguna de sus herramientas existentes.
+
+## Instalación de Vagrant
+
+Puedes instalar Vagran de dos maneras, mediante comandos en la consola de mondos o descargando el installador desde la página oficial en la cual tambien esta la documentación que veras a continuación. 
+
+<Card title="" icon="">
+### Linux y macOS 
+Para una instalación mediante la consola de comandos deveras utilizar lo siguiente:
+
+<Tabs>
+
+  <TabItem label="macOS" icon="apple">
+    ```bash
+    brew tap hashicorp/tap
+    brew install hashicorp/tap/hashicorp-vagrant
+    ```
+  </TabItem>
+  <TabItem label="Linux" icon="linux">
+    ```bash
+    wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+    echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+    sudo apt update && sudo apt install vagrant
+    ```
+  </TabItem>
+</Tabs>
+</Card>
+
+<Card title="Windows" icon="seti:windows"> 
+
+Para instalarlo en windows solo tienes que descargar el instalador y seguir los pasos de instalación. 
+
+<h3>Instalador Version 2.4.1 Arquitectura AMD64</h3>
+
+### [Windows AMD64](https://releases.hashicorp.com/vagrant/2.4.1/vagrant_2.4.1_windows_amd64.msi)
+
+<h3>Instalador Version 2.4.1 Arquitectura i686</h3>
+
+### [Windows i686](https://releases.hashicorp.com/vagrant/2.4.1/vagrant_2.4.1_windows_i686.msi)
+
+  - **Comparación de arquitecturas**
+    <img src="/src/assets/tablaComparacion.png" alt="Node.js Logo" style="width:500px;"/>
+
+<Aside type="note" title="Nota">Debe realizar la instalación por default y reiniciar su computadora al finalizar.</Aside>
+
+</Card>
+
+<Card>
+Puedes ingresar tambien a la pagina oficial y descargarlo desde el siguiente enlase:
+
+    - [Vagrant Instalador](https://developer.hashicorp.com/vagrant/install)
+
+Para mas documentacion oficial puedes ingresar directamente a la pagina de Vagrant
+
+    - [Vagrant Oficial](https://developer.hashicorp.com/vagrant)
+</Card>
+
+
+
+
+
+
+
+

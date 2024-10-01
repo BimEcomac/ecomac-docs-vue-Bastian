@@ -1,0 +1,56 @@
+---
+title: Dev-Doc
+description: ''
+template: splash
+hero:
+  title: 
+    Dev-Team
+    <span
+      class="font-black text-transparent
+        bg-clip-text bg-gradient-to-b
+        from-accent-700 to-accent-400
+        dark:from-accent-500 dark:to-accent-200"
+    >
+      Documentation
+    </span>
+  tagline: ''
+  image:
+    file: src/assets/LogoEcomac.png
+  actions:
+    - text: Ambientes
+      link: local/intro
+      icon: right-arrow
+      variant: secondary
+---
+import userAuthValidatea from '../../components/AuthValidateComponent.astro';
+
+<userAuthValidatea client:load />
+
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import IndexImage from 'src/components/IndexImage.astro';
+
+<section class="intro">
+  <IndexImage />
+  <h1>Bienvenido a la Página de Documentación de Ecomac</h1>
+  <p>Esta plataforma ha sido diseñada para centralizar y facilitar el acceso a toda la información técnica relevante sobre los diversos sistemas y tecnologías que utilizamos. Nuestro objetivo es proporcionar a los desarrolladores y colaboradores una referencia clara y completa para entender, configurar y mantener nuestros proyectos de manera eficiente.</p>
+  <h2>¿Qué encontrarás en esta página?</h2>
+</section>
+
+<CardGrid stagger class="">
+  <Card title="Descripción del Sistema:" icon="open-book">
+    Cada uno de nuestros sistemas cuenta con una descripción detallada que explica su propósito y funcionalidad. Esto te ayudará a comprender mejor el alcance de cada proyecto.
+  </Card>
+  <Card title="Frameworks Utilizados:" icon="open-book">
+    Aquí podrás encontrar información sobre los frameworks utilizados en cada sistema, junto con enlaces a su documentación oficial. Esto facilita la comprensión de las tecnologías subyacentes y su correcta utilización.
+  </Card>
+  <Card title="Variables de Ambiente:" icon="open-book">
+    Detallamos las variables de ambiente necesarias para la correcta configuración de cada sistema, asegurando que puedas replicar el entorno de desarrollo, prueba y producción de manera precisa.
+  </Card>
+  <Card title="Instrucciones para Clonar y Configurar Repositorios:" icon="open-book">
+    Proporcionamos guías detalladas para clonar y configurar inicialmente los repositorios según el ambiente (local, desarrollo, producción), incluyendo consideraciones sobre migraciones y seeders si es necesario.
+  </Card>
+  <Card title="Minutas para Actualización de Proyectos:" icon="open-book">
+    Ofrecemos minutas claras para actualizar y volver a levantar los proyectos cuando ocurren cambios, asegurando que siempre tengas los pasos necesarios para mantener los sistemas operativos y actualizados.
+  </Card>
+</CardGrid>

@@ -1,0 +1,77 @@
+---
+title: Configuración e Instalación de Homestead
+description: Guía paso a paso para la instalación y configuración de Homestead.
+lastUpdated: 2024-07-25
+---
+
+import { Card, CardGrid, Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+
+
+
+## Primeros Pasos
+Antes de lanzar tu entorno Homestead, debes instalar Vagrant, así como uno de los siguientes proveedores compatibles:
+
+- **VirtualBox 6.1.x**
+- **Parallels**
+
+Todos estos paquetes de software proporcionan instaladores visuales fáciles de usar para todos los sistemas operativos populares.
+
+Para usar el proveedor Parallels, necesitarás instalar el complemento Parallels Vagrant. Es gratuito.
+
+<Aside type="note" title="Video">Puedes ver este [Video explicativo](https://www.youtube.com/watch?v=5jDXiwAi3zo&ab_channel=TechSchoolMediaEs) para poder guiarte con la instalación</Aside>
+
+## Instalación de Homestead
+Puedes instalar Homestead clonando el repositorio de Homestead en tu máquina host. Considera clonar el repositorio en una carpeta Homestead dentro de tu directorio "home", ya que la máquina virtual Homestead servirá como host para todas tus aplicaciones Laravel. A lo largo de esta documentación, nos referiremos a este directorio como tu "directorio Homestead":
+
+```bash
+git clone https://github.com/laravel/homestead.git ~/Homestead
+```
+
+Después de clonar el repositorio Laravel Homestead, debes cambiar a la rama release. Esta rama siempre contiene la última versión estable de Homestead:
+
+```bash
+cd ~/Homestead
+git checkout release
+```
+A continuación, ejecuta el comando init.sh desde el directorio Homestead para crear el archivo de configuración Homestead.yaml. El archivo Homestead.yaml es donde configurarás todos los ajustes para tu instalación de Homestead. Este archivo se colocará en el directorio Homestead:
+<Tabs>
+
+  <TabItem label="Windows" icon="seti:windows">
+  ```bash
+     init.bat
+  ```
+  </TabItem>
+  <TabItem label="macOs & Linux" icon="linux">
+ 
+    ```bash
+    bash init.sh
+    ```
+  </TabItem>
+</Tabs>
+
+## Configuración de Carpetas Compartidas
+La propiedad folders del archivo Homestead.yaml enumera todas las carpetas que deseas compartir con tu entorno Homestead. A medida que los archivos dentro de estas carpetas cambian, se mantendrán sincronizados entre tu máquina local y el entorno virtual de Homestead. Puedes configurar tantas carpetas compartidas como sea necesario:
+```bash
+provider: virtualbox
+```
+## Configuración de Homestead
+Configurando tu Proveedor
+La clave provider en tu archivo **Homestead.yaml** indica qué proveedor de Vagrant debe usarse: virtualbox o parallels:
+
+```bash
+folders:
+    - map: ~/code/project1
+      to: /home/vagrant/project1
+```
+## Resolución de nombre de host
+Homestead publica nombres de host mDNSpara la resolución automática de host. Si lo configura hostname: homesteaden su Homestead.yamlarchivo, el host estará disponible en homestead.local. Las distribuciones de escritorio macOS, iOS y Linux incluyen mDNScompatibilidad de forma predeterminada. Si usa Windows, debe instalar Bonjour Print Services para Windows .
+
+El uso de nombres de host automáticos funciona mejor para instalaciones de Homestead por proyecto. Si aloja varios sitios en una sola instancia de Homestead, puede agregar los "dominios" de sus sitios web al hostsarchivo en su máquina. El hostsarchivo redirigirá las solicitudes para sus sitios de Homestead a su máquina virtual de Homestead. En macOS y Linux, este archivo se encuentra en /etc/hosts. En Windows, se encuentra en C:\Windows\System32\drivers\etc\hosts. Las líneas que agregue a este archivo se verán como las siguientes:
+
+```bash
+192.168.56.56  homestead.test
+```
+## Documentación.
+
+- Leer [Documentación oficial](https://laravel.com/docs/11.x/homestead).
+- Visualizar [Video explicativo](https://www.youtube.com/watch?v=5jDXiwAi3zo&ab_channel=TechSchoolMediaEs)

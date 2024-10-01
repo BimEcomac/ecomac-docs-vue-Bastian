@@ -1,0 +1,60 @@
+---
+title: Proyectos y servicios en Odin
+description: ''
+lastUpdated: 2024-07-25
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## **Odin**
+
+### Ecomac Backend
+***ecomac-cl-backend***
+- Backend principal de los sistemas gestionados por Transformación Digital. Todos los sistemas, a excepción de caja-web-ecomac, turnero-sac y postventa, utilizan las APIs de este repositorio. Posee integraciones con Ecoline.
+<Card> 
+- **API producción**: [https://api.somosecomac.cl/api](https://api.somosecomac.cl/api)
+- **API desarrollo**: [http://200.68.46.66/api](http://200.68.46.66/api)
+</Card>
+
+### Somos Ecomac
+***somos-ecomac***
+- Sistema encargado de gestionar los proyectos publicados en la página web. A futuro, se piensa agregar el resto de módulos a este mismo sistema.
+<Card> 
+- **Acceso desarrollo a través de gambito**: [http://www.somosecomac.cl](http://www.somosecomac.cl)
+- **Acceso producción**: [https://www.somosecomac.cl](https://www.somosecomac.cl)
+</Card>
+
+### Generador de firmas
+***generador-de-firmas***
+- Aplicación web creada con el propósito de generar firmas para los correos de los colaboradores de Ecomac.
+<Card> 
+- **Acceso desarrollo a través de gambito**:
+- **Acceso producción**:
+</Card>
+
+### Solicitud anticipo proveedores
+***sistema-de-anticipo-proveedores***
+- Sistema encargado de gestionar las solicitudes de anticipo creadas por los colaboradores. Permite crear solicitudes y luego aceptarlas o rechazarlas dependiendo del jefe a cargo del colaborador que la creó. Posee integración con AX.
+<Card>
+    - **Acceso desarrollo a través de gambito**: está en los *.env*
+    - **Acceso producción**: está en los *.env*
+</Card>
+
+### Postventa
+***postventa***
+- Este sistema se encarga de hacer seguimiento y gestión de las postventas generadas por turnero-sac. Permite documentar las postventas y avanzarlas desde cuando son creadas hasta cuando se cierran. Está disponible para desktop y mobile.
+
+### Turnero sac
+***turnero-sac***
+- Este sistema posee dos módulos. Uno encargado de crear postventas a clientes y a comunidades de la inmobiliaria. El otro módulo se encarga de gestionar la entrega de las viviendas a los nuevos clientes, utilizado en el momento que el cliente recibe su nueva casa.
+<Card> 
+- **Dato curioso**: *El nombre turnero proviene de que en un inicio el repositorio fue creado como un sistema de turnos para la atención de clientes en la sede de La Serena, sin embargo, esa funcionalidad quedó obsoleta y ahora se utiliza para lo descrito más arriba.*
+</Card>
+
+### Caja web ecomac
+***caja-web-ecomac***
+- En este sistema se ingresan los pagos y boletas relacionados a Ecomac, para hacerles seguimiento.
+
+### Somos ecomac login
+***somos-ecomac-login***
+- Módulo de ingreso que te redirecciona a distintos sistemas de Transformación Digital.
+
